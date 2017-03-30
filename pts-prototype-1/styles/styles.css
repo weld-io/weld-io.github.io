@@ -1,7 +1,8 @@
-* {
+*, fieldset {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: none;
 }
 
 body {
@@ -49,6 +50,10 @@ h2 {
 	flex-direction: row;
 	justify-content: space-between;
 }
+.weld-editor-panel > * {
+	flex-shrink: 0; /* never shrink */
+}
+
 .weld-editor-panel.layer1 {
 	z-index: 8000;
 	background-color: #ddd;
@@ -61,9 +66,10 @@ h2 {
 	z-index: 11000;
 	background-color: #f9f9f9;
 }
+
 .weld-editor-panel.side-panel {
 	width: 20vw;
-	top: 0;
+	top: 10vh;
 	bottom: 0;
 	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -72,13 +78,13 @@ h2 {
 	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
-.weld-navbar {
+.weld-toolbar-top {
 	height: 10vh;
 	width: 100%;
 	padding: 0 1vw;
 }
 
-.weld-editor-toolbar {
+.weld-toolbar-bottom {
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -109,6 +115,7 @@ h2 {
 	color: inherit;
 	text-transform: uppercase;
 	line-height: 1em;
+	font-size: inherit;
 }
 .weld-button:hover {
 	background: rgba(0, 0, 0, 0.1);
@@ -122,7 +129,7 @@ h2 {
 }
 .weld-button .text {
 	display: block;
-	font-size: 0.7rem;
+	/*font-size: 0.7em;*/
 }
 
 .weld-logo {
@@ -134,3 +141,5 @@ input {
 	width: 100%;
 	margin: 5vh 0;
 }
+
+/**/

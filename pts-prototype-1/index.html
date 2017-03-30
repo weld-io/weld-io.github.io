@@ -9,7 +9,7 @@
 </head>
 <body>
 
-	<nav class="weld-editor-panel weld-navbar layer2" role="navigation">
+	<nav class="weld-editor-panel weld-toolbar-top layer2" role="navigation">
 		<button class="weld-button"><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
 		<button class="weld-button">Menu</button>
 		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
@@ -24,10 +24,12 @@
 
 	<div class="weld-editor layer0">
 
-		<!-- <div class="weld-editor-panel weld-editor-toolbar"></div> -->
+		<!-- <div class="weld-editor-panel weld-toolbar-bottom"></div> -->
 
 		<div class="weld-editor-panel side-panel layer1 left">
+			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
 		</div>
+
 		<div class="weld-editor-panel side-panel layer1 right">
 		</div>
 
@@ -35,8 +37,8 @@
 
 		<div class="weld-editor-panel weld-dialog layer3">
 			<h2>Settings</h2>
-			<p><label>Font size:</label><input id="fontSizeSlider" type="range" value="16" min="10" max="100"/></p>
-			<p><label>Brightness:</label><input id="colorSlider" type="range" value="127" min="0" max="255"/></p>
+			<fieldset><label>Font size:</label><input id="fontSizeSlider" type="range" value="16" min="10" max="100"/></fieldset>
+			<fieldset><label>Brightness:</label><input id="colorSlider" type="range" value="127" min="0" max="255"/></fieldset>
 		</div>
 
 	</div>
