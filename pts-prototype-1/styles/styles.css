@@ -1,0 +1,136 @@
+* {
+	margin:  0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+body, input, button {
+	font-family: weld-light;
+	font-size: 1rem;
+}
+
+h2 {
+	font-size: 1.4em;
+	margin-bottom: 1em;
+}
+
+.weld-editor {
+	background: #808689;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.weld-canvas {
+	position: relative;
+	width: 320px;
+	height: 400px;
+	margin: 11vh auto;
+	background: white;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.weld-editor-panel {
+	position: absolute;
+	box-sizing: border-box;
+	z-index: 9000;
+	border-radius: 0;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+	background: #efefef;
+	color: #53585f;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.weld-editor-panel.layer1 {
+	z-index: 8000;
+	background-color: #ddd;
+}
+.weld-editor-panel.layer2 {
+	z-index: 9000;
+	background-color: #efefef;
+}
+.weld-editor-panel.layer3 {
+	z-index: 11000;
+	background-color: #f9f9f9;
+}
+.weld-editor-panel.side-panel {
+	width: 20vw;
+	top: 0;
+	bottom: 0;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+}
+.weld-editor-panel.side-panel.right {
+	right: 0;
+	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.weld-navbar {
+	height: 10vh;
+	width: 100%;
+	padding: 0 1vw;
+}
+
+.weld-editor-toolbar {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 10vh;
+	box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.weld-dialog {
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 64vw;
+	max-width: 40em;
+	min-height: 15em;
+	border-radius: 4px;
+	padding: 1em;
+	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.weld-button {
+	height: 100%;
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
+	color: inherit;
+	text-transform: uppercase;
+	line-height: 1em;
+}
+.weld-button:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.weld-button:active {
+	box-shadow: inset 0 1px 2px #555;
+}
+.weld-button .icon {
+	display: inline-block;
+	height: 4vh;
+}
+.weld-button .text {
+	display: block;
+	font-size: 0.7rem;
+}
+
+.weld-logo {
+	height: 4vh;
+}
+
+input {
+	display: inline-block;
+	width: 100%;
+	margin: 5vh 0;
+}

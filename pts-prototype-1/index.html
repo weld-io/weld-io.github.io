@@ -1,17 +1,52 @@
-<!doctype html>
-<html>
+<!DOCTYPE html> 
+<html lang="en-us">
 <head>
-  <title>Weld Test</title>
-  <style type="text/css">
-    body {
-      background: #EEE;
-      font-family: sans-serif;
-    }
-  </style>
+	<title>HTML Page</title>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+	<meta name="description" content="description">
+	<meta name="keywords" content="key,word">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" type="image/x-icon" href="./favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://s3-eu-west-1.amazonaws.com/weld-design-kit/weld-fonts.css">
+	<link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
 <body>
-  <h1>Weld Test</h1>
-  <div id="weld-embed" style="height:1500px"></div>
-  <script type="text/javascript" src="https://api-production-weld.netdna-ssl.com/embed/slug:weld-test-everything?key=weldtest"></script>
+
+	<nav class="weld-editor-panel weld-navbar layer2" role="navigation">
+		<button class="weld-button"><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
+		<button class="weld-button">Menu</button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="weld-button">?</button>
+		<button class="weld-button">Menu</button>
+	</nav>
+
+	<div class="weld-editor layer0">
+
+		<!-- <div class="weld-editor-panel weld-editor-toolbar"></div> -->
+
+		<div class="weld-editor-panel side-panel layer1 left">
+		</div>
+		<div class="weld-editor-panel side-panel layer1 right">
+		</div>
+
+		<div class="weld-canvas"></div>
+
+		<div class="weld-editor-panel weld-dialog layer3">
+			<h2>Dialog box</h2>
+			<p>Adjust color brightness:</p>
+			<p><input id="colorSlider" type="range" min="0" max="255" /></p>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://bgrins.github.io/TinyColor/tinycolor.js"></script>
+	<script type="text/javascript" src="./scripts/application.js"></script>
+
 </body>
 </html>
