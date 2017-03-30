@@ -104,6 +104,9 @@ h2 {
 	height: 4vh;
 }
 
+.weld-toolbar button {
+	padding: 0 0.5em;
+}
 .weld-toolbar button:hover {
 	background: rgba(0, 0, 0, 0.1);
 }
@@ -125,7 +128,7 @@ h2 {
 	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 	flex-direction: column;
 	justify-content: flex-start;
-	transition: all 0.5s;
+	transition: top 0.5s, left 0.5s, opacity 0.5s;
 }
 
 .weld-dialog.hidden {
