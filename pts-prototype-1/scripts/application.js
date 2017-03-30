@@ -44,4 +44,8 @@ $('#colorSlider').on('input', function (evt) {
 	$('.layer0').setTinycolor(layer0Color);
 });
 
-//console.log('dx', $('#colorSlider'));
+// Font size
+
+$('body').reactiveCss('font-size', function() {
+	return $('#fontSizeSlider').val() + 'px';
+});

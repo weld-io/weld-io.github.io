@@ -34,15 +34,16 @@
 		<div class="weld-canvas"></div>
 
 		<div class="weld-editor-panel weld-dialog layer3">
-			<h2>Dialog box</h2>
-			<p>Adjust color brightness:</p>
-			<p><input id="colorSlider" type="range" min="0" max="255" /></p>
+			<h2>Settings</h2>
+			<p><label>Font size:</label><input id="fontSizeSlider" type="range" value="16" min="10" max="100"/></p>
+			<p><label>Brightness:</label><input id="colorSlider" type="range" value="127" min="0" max="255"/></p>
 		</div>
 
 	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://bgrins.github.io/TinyColor/tinycolor.js"></script>
+	<script type="text/javascript" src="./scripts/superwatcher.js"></script>
 	<script type="text/javascript" src="./scripts/application.js"></script>
 
 </body>
