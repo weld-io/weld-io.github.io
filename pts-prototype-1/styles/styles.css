@@ -1,4 +1,4 @@
-*, fieldset {
+*, body, fieldset {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -6,13 +6,12 @@
 }
 
 body {
-	box-sizing: border-box;
 	font-size: 16px;
 }
 
 body, input, button {
 	font-family: weld-light;
-	font-size: 1rem;
+	font-size: inherit;
 }
 
 h2 {
@@ -20,11 +19,13 @@ h2 {
 	margin-bottom: 1em;
 }
 
+/* ----- Editor ----- */
+
 .weld-editor {
 	background: #808689;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 4em; /* same as weld-toolbar-top:height */
 	width: 100%;
 	height: 100%;
 }
@@ -37,6 +38,8 @@ h2 {
 	background: white;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
+
+/* ----- Editor panel (generic) and layers ----- */
 
 .weld-editor-panel {
 	position: absolute;
@@ -67,11 +70,16 @@ h2 {
 	background-color: #f9f9f9;
 }
 
+/* ----- Side panels & Toolbar ----- */
+
 .weld-editor-panel.side-panel {
 	width: 20vw;
-	top: 10vh;
+	padding: 1rem;
+	top: 0;
 	bottom: 0;
 	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+	flex-direction: column;
+	overflow-y: auto;
 }
 .weld-editor-panel.side-panel.right {
 	right: 0;
@@ -79,9 +87,9 @@ h2 {
 }
 
 .weld-toolbar-top {
-	height: 10vh;
+	height: 4em; /* same as side-panel:top */
 	width: 100%;
-	padding: 0 1vw;
+	padding: 0 1rem;
 }
 
 .weld-toolbar-bottom {
@@ -91,6 +99,12 @@ h2 {
 	height: 10vh;
 	box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2);
 }
+
+.weld-logo {
+	height: 4vh;
+}
+
+/* ----- Dialog ----- */
 
 .weld-dialog {
 	top: 50%;
@@ -105,6 +119,8 @@ h2 {
 	flex-direction: column;
 	justify-content: flex-start;
 }
+
+/* ----- Buttons and Input fields ----- */
 
 .weld-button {
 	height: 100%;
@@ -132,14 +148,26 @@ h2 {
 	/*font-size: 0.7em;*/
 }
 
-.weld-logo {
-	height: 4vh;
-}
-
 input {
 	display: inline-block;
 	width: 100%;
 	margin: 5vh 0;
 }
 
-/**/
+/* ----- Page/screen list ----- */
+
+.thumbnail {
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.thumbnail .image {
+	width: 100%;
+	height: 7rem;
+	background-color: white;
+}
+
+.thumbnail .text {
+	width: 100%;
+	text-align: center;
+}
