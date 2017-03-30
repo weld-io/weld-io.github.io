@@ -22,6 +22,18 @@ tinycolor.prototype.different = function (amount) {
 
 //-----------
 
+// Dialog
+
+$('.close-button').on('click', function (evt) {
+	$('.weld-dialog').addClass('hidden');
+});
+
+$('.weld-toolbar button').on('click', function (evt) {
+	$('.weld-dialog').removeClass('hidden');
+});
+
+// Contrast
+
 var LAYER_CONTRAST = 7;
 var TEXT_CONTRAST = 50;
 

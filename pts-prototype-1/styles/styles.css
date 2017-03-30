@@ -86,13 +86,13 @@ h2 {
 	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
-.weld-toolbar-top {
+.weld-toolbar.top {
 	height: 4em; /* same as side-panel:top */
 	width: 100%;
 	padding: 0 1rem;
 }
 
-.weld-toolbar-bottom {
+.weld-toolbar.bottom {
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -102,6 +102,13 @@ h2 {
 
 .weld-logo {
 	height: 4vh;
+}
+
+.weld-toolbar button:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.weld-toolbar button:active {
+	box-shadow: inset 0 1px 2px #555;
 }
 
 /* ----- Dialog ----- */
@@ -118,11 +125,30 @@ h2 {
 	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 	flex-direction: column;
 	justify-content: flex-start;
+	transition: all 0.5s;
+}
+
+.weld-dialog.hidden {
+	opacity: 0;
+	pointer-events: none;
+	top: 0;
+	left: 100%;
+}
+
+button.close-button {
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	height: auto;
+}
+
+button.close-button .icon {
+	height: 1em;
 }
 
 /* ----- Buttons and Input fields ----- */
 
-.weld-button {
+button {
 	height: 100%;
 	border: none;
 	background: none;
@@ -133,19 +159,12 @@ h2 {
 	line-height: 1em;
 	font-size: inherit;
 }
-.weld-button:hover {
-	background: rgba(0, 0, 0, 0.1);
-}
-.weld-button:active {
-	box-shadow: inset 0 1px 2px #555;
-}
-.weld-button .icon {
+button .icon {
 	display: inline-block;
-	height: 4vh;
+	height: 2em;
 }
-.weld-button .text {
+button .text {
 	display: block;
-	/*font-size: 0.7em;*/
 }
 
 input {
