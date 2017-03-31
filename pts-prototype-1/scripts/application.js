@@ -60,7 +60,7 @@ $('#brightnessValue').on('input', function (evt) {
 	$('.layer0').setTinycolor(layer0Color);
 });
 
-// Font size
+// Font
 
 $('body').reactiveCss('font-size', function() {
 	return $('#fontSize').val() + 'px';
@@ -68,4 +68,8 @@ $('body').reactiveCss('font-size', function() {
 
 $('body').reactiveCss('font-family', function() {
 	return $('#fontFamily').val();
+});
+
+$('body').reactiveCss('text-transform', function() {
+	return $('#textTransform:checked').length ? 'uppercase' : 'none';
 });
