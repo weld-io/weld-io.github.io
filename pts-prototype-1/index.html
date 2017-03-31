@@ -5,6 +5,7 @@
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="https://s3-eu-west-1.amazonaws.com/weld-design-kit/weld-fonts.css">
+	<link rel="stylesheet" type="text/css" href="https://www.dyslexiefont.com/fonts/fonts.css">
 	<link rel="stylesheet" type="text/css" href="./styles/styles.css">
 </head>
 <body>
@@ -42,11 +43,26 @@
 			<div class="weld-element text">Min hemsida</div>
 		</div>
 
-		<div class="weld-dialog hidden weld-editor-panel layer3">
+		<div class="weld-dialog xhidden weld-editor-panel layer3">
 			<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
 			<h2>Settings</h2>
-			<fieldset><label>Font size:</label><input id="fontSizeSlider" type="range" value="16" min="10" max="50"/></fieldset>
-			<fieldset><label>Brightness:</label><input id="colorSlider" type="range" value="127" min="0" max="255"/></fieldset>
+			<fieldset>
+				<label>Font size:</label>
+				<input id="fontSize" type="range" value="16" min="10" max="50"/>
+			</fieldset>
+			<fieldset>
+				<label>Font family:</label>
+				<select id="fontFamily">
+					<option value="weld-light" selected>Weld</option>
+					<option>Georgia</option>
+					<option>Helvetica</option>
+					<option value="dyslexieregular">Dyslexie</option>
+				</select>
+			</fieldset>
+			<fieldset>
+				<label>Brightness:</label>
+				<input id="brightnessValue" type="range" value="127" min="0" max="255"/>
+			</fieldset>
 		</div>
 
 	</div>

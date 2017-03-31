@@ -41,7 +41,7 @@ $('.weld-element').draggable().resizable();
 var LAYER_CONTRAST = 7;
 var TEXT_CONTRAST = 50;
 
-$('#colorSlider').on('input', function (evt) {
+$('#brightnessValue').on('input', function (evt) {
 	//console.log(evt.target.value);
 	// Layer3
 	var layer3Color = tinycolor({ r: evt.target.value, g: evt.target.value, b: evt.target.value });
@@ -63,5 +63,9 @@ $('#colorSlider').on('input', function (evt) {
 // Font size
 
 $('body').reactiveCss('font-size', function() {
-	return $('#fontSizeSlider').val() + 'px';
+	return $('#fontSize').val() + 'px';
+});
+
+$('body').reactiveCss('font-family', function() {
+	return $('#fontFamily').val();
 });

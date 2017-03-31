@@ -3,15 +3,16 @@
 	padding: 0;
 	box-sizing: border-box;
 	border: none;
+	/* Inherit from <body>: */
+	font-family: inherit;
+	font-size: inherit;
+	text-transform: inherit;
 }
 
+/* Initial values */
 body {
 	font-size: 16px;
-}
-
-body, input, button {
 	font-family: weld-light;
-	font-size: inherit;
 }
 
 h2 {
@@ -96,7 +97,7 @@ h2 {
 /* ----- Side panels & Toolbar ----- */
 
 .weld-editor-panel.side-panel {
-	width: 12em;
+	width: 12rem;
 	padding: 1rem;
 	top: 0;
 	bottom: 0;
@@ -141,6 +142,7 @@ h2 {
 /* ----- Dialog ----- */
 
 .weld-dialog {
+	font-size: 1rem;
 	top: 16rem;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
@@ -175,6 +177,13 @@ button.close-button .icon {
 
 /* ----- Buttons and Input fields ----- */
 
+fieldset {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
 button {
 	height: 100%;
 	border: none;
@@ -182,7 +191,6 @@ button {
 	cursor: pointer;
 	outline: none;
 	color: inherit;
-	text-transform: uppercase;
 	line-height: 1em;
 	font-size: inherit;
 }
@@ -194,10 +202,37 @@ button .text {
 	display: block;
 }
 
-input {
+/*input {
 	display: inline-block;
 	width: 100%;
 	margin: 5vh 0;
+}*/
+
+/* Nice & simple: Input and Dropdown Menu */
+input,
+textarea,
+select {
+	outline: none;
+	resize: none;
+	box-sizing: border-box;
+	background-color: white;
+	border-radius: 0.2em;
+	border: 2px solid lightgray;
+	color: inherit;
+	font-size: inherit;
+	min-width: 15em;
+	padding: 0.6em;
+	margin: 0.2em;
+}
+input:hover,
+textarea:hover,
+select:hover {
+	border-color: silver;
+}
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: darkgray;
 }
 
 /* ----- Page/screen list ----- */
