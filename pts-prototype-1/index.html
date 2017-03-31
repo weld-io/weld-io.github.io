@@ -45,7 +45,7 @@
 
 		<div class="weld-dialog xhidden weld-editor-panel layer3">
 			<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
-			<h2>Settings</h2>
+			<h2 data-i18n="settings">Settings</h2>
 			<fieldset>
 				<label>Font size:</label>
 				<input id="fontSize" type="range" value="16" min="10" max="50"/>
@@ -62,6 +62,13 @@
 				<input type="checkbox" id="textTransform">
 			</fieldset>
 			<fieldset>
+				<label>Language:</label>
+				<select id="languageList">
+					<option value="en" selected>English</option>
+					<option value="sv">Svenska</option>
+				</select>
+			</fieldset>
+			<fieldset>
 				<label>Brightness:</label>
 				<input id="brightnessValue" type="range" value="127" min="0" max="255"/>
 			</fieldset>
@@ -71,6 +78,9 @@
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./bower_components/i18next/i18next.min.js"></script>
+	<script type="text/javascript" src="./bower_components/jquery-i18next/jquery-i18next.min.js"></script>
 	<script type="text/javascript" src="https://bgrins.github.io/TinyColor/tinycolor.js"></script>
 	<script type="text/javascript" src="./scripts/superwatcher.js"></script>
 	<script type="text/javascript" src="./scripts/application.js"></script>

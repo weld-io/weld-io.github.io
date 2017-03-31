@@ -73,3 +73,39 @@ $('body').reactiveCss('font-family', function() {
 $('body').reactiveCss('text-transform', function() {
 	return $('#textTransform:checked').length ? 'uppercase' : 'none';
 });
+
+// Localize / i18n
+
+var localizeText = function (languageCode) {
+	i18next.init(
+		{
+			lng: languageCode || 'en',
+			// evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
+			resources: {
+				en: {
+					translation: {
+						settings: 'Settings',
+					}
+				},
+				sv: {
+					translation: {
+						settings: 'Inställningar',
+					}
+				},
+			}
+		},
+		function (err, t) {
+			jqueryI18next.init(i18next, $);
+			$('body').localize();
+		}
+	);
+}
+
+$('#languageList').on('input', function (evt) {
+	localizeText($('#languageList').val());	
+});
+
+localizeText('en');
+
+
+

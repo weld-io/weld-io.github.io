@@ -1,0 +1,21 @@
+{
+  "name": "pts-prototype-1",
+  "homepage": "https://github.com/weld-io/weld-io.github.io",
+  "authors": [
+    "Tom Söderlund <tom@tomsoderlund.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "i18next": "^7.1.3",
+    "jquery-i18next": "^1.2.0"
+  }
+}

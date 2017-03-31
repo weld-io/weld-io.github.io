@@ -1,9 +1,0 @@
-{
-	"Hello": "Hallo",
-	"Hello %s": "Hallo %s",
-	"%s cat": {
-		"zero": "keine Katzen",
-		"one": "%s Katze",
-		"other": "%s Katzen"
-	}
-}
