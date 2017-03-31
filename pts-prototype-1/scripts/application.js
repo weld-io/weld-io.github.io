@@ -36,6 +36,53 @@ $('.weld-toolbar button').on('click', function (evt) {
 
 $('.weld-element').draggable().resizable();
 
+// Colors
+
+var colorThemes = {
+	default: {
+		'.weld-editor-background': '#808689',
+		'.weld-editor-panel': '#ddd',
+		'.weld-editor-panel:color': '#53585f',
+		'.weld-toolbar': '#efefef',
+		'.weld-dialog': '#f9f9f9',
+	},
+	weld: {
+		'.weld-editor-background': '#eeeff1',
+		'.weld-editor-panel': '#2e3b4b',
+		'.weld-editor-panel:color': '#ddd',
+		'.weld-toolbar': '#1b2939',
+		'.side-panel.right': '#fbfbfb',
+		'.weld-dialog:color': '#333',
+	},
+	bright: {
+		'.weld-editor-background': '#caf',
+		'.weld-editor-panel': '#dad',
+		//'.weld-editor-panel:color': '#53585f',
+		'.weld-toolbar': '#abc',
+		'.weld-dialog': '#ddd',
+	},
+	dark: {
+		'.weld-editor-background': 'darkblue',
+		'.weld-editor-panel': 'blue',
+	},
+};
+
+var setColorTheme = function (theme, contrast) {
+	theme = theme || 'default';
+	var themeStyles = jQuery.extend({}, colorThemes['default'], colorThemes[theme]);
+	for (var themeKey in themeStyles) {
+		var selector = themeKey.split(':')[0];
+		var colorProperty = themeKey.split(':')[1] || 'background-color';
+		var colorValue = themeStyles[themeKey];
+		$(selector).css(colorProperty, colorValue);
+	}
+};
+
+$('#colorTheme').on('input', function (evt) {
+	setColorTheme($('#colorTheme').val());	
+});
+//setColorTheme();
+
 // Contrast
 
 var LAYER_CONTRAST = 7;

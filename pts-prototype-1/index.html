@@ -10,7 +10,7 @@
 </head>
 <body>
 
-	<nav class="weld-editor-panel weld-toolbar top layer2" role="navigation">
+	<nav class="weld-editor-panel weld-toolbar top" role="navigation">
 		<button><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
 		<button>Menu</button>
 		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
@@ -23,11 +23,11 @@
 		<button>Menu</button>
 	</nav>
 
-	<div class="weld-editor layer0">
+	<div class="weld-editor-background">
 
 		<!-- <div class="weld-editor-panel weld-toolbar bottom"></div> -->
 
-		<div class="weld-editor-panel side-panel layer1 left">
+		<div class="weld-editor-panel side-panel left">
 			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
 			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
 			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
@@ -35,7 +35,7 @@
 			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
 		</div>
 
-		<div class="weld-editor-panel side-panel layer1 right">
+		<div class="weld-editor-panel side-panel right">
 		</div>
 
 		<div class="weld-canvas">
@@ -43,7 +43,7 @@
 			<div class="weld-element text">Min hemsida</div>
 		</div>
 
-		<div class="weld-dialog xhidden weld-editor-panel layer3">
+		<div class="weld-dialog xhidden weld-editor-panel">
 			<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
 			<h2 data-i18n="settings">Settings</h2>
 			<fieldset>
@@ -66,6 +66,15 @@
 				<select id="languageList">
 					<option value="en" selected>English</option>
 					<option value="sv">Svenska</option>
+				</select>
+			</fieldset>
+			<fieldset>
+				<label>Colors:</label>
+				<select id="colorTheme">
+					<option selected>default</option>
+					<option>weld</option>
+					<option>bright</option>
+					<option>dark</option>
 				</select>
 			</fieldset>
 			<fieldset>

@@ -22,9 +22,10 @@ h2 {
 
 /* ----- Editor & content ----- */
 
-.weld-editor {
-	background: #808689;
+.weld-editor-background {
+	z-index: 0;
 	position: absolute;
+	background: #808689;
 	left: 0;
 	top: 4em; /* same as weld-toolbar-top:height */
 	width: 100%;
@@ -46,6 +47,10 @@ h2 {
 	width: 100%;
 	box-sizing: border-box;
 	cursor: pointer;
+	/* Not affected by <body>: */
+	font-family: initial;
+	font-size: initial;
+	text-transform: initial;
 }
 .weld-element:hover {
 	border: 2px solid lightgray;
@@ -61,7 +66,6 @@ h2 {
 	text-align: center;
 	top: 40%;
 }
-
 
 /* ----- Editor panel (generic) and layers ----- */
 
@@ -81,19 +85,6 @@ h2 {
 	flex-shrink: 0; /* never shrink */
 }
 
-.weld-editor-panel.layer1 {
-	z-index: 8000;
-	background-color: #ddd;
-}
-.weld-editor-panel.layer2 {
-	z-index: 9000;
-	background-color: #efefef;
-}
-.weld-editor-panel.layer3 {
-	z-index: 11000;
-	background-color: #f9f9f9;
-}
-
 /* ----- Side panels & Toolbar ----- */
 
 .weld-editor-panel.side-panel {
@@ -111,12 +102,14 @@ h2 {
 	box-shadow: -2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
+.weld-toolbar {
+	z-index: 10;
+	padding: 0 1rem;
+}
 .weld-toolbar.top {
 	height: 4em; /* same as side-panel:top */
 	width: 100%;
-	padding: 0 1rem;
 }
-
 .weld-toolbar.bottom {
 	bottom: 0;
 	left: 0;
