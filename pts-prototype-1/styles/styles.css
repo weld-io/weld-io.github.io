@@ -190,6 +190,7 @@ button {
 button .icon {
 	display: inline-block;
 	height: 2em;
+	font-family: "fontello";
 }
 button .text {
 	display: block;

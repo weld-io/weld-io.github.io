@@ -28,7 +28,7 @@ $('.close-button').on('click', function (evt) {
 	$('.weld-dialog').addClass('hidden');
 });
 
-$('.weld-toolbar button').on('click', function (evt) {
+$('.weld-toolbar button.openDialog').on('click', function (evt) {
 	$('.weld-dialog').removeClass('hidden');
 });
 
@@ -146,13 +146,22 @@ var localizeText = function (languageCode) {
 			$('body').localize();
 		}
 	);
-}
+};
+// Icon switcher
+
+$('.weld-toolbar .icon').on('click', function (evt, a, b) {
+	var icons = this.dataset.icons.split(',');
+	var currentIndex = _.indexOf(icons, this.dataset.icon);
+	$(this).removeClass(this.dataset.icon);
+	if ( icons.length > currentIndex + 1) {
+		this.dataset.icon = icons[currentIndex + 1];
+	} else {
+		this.dataset.icon = icons[0];
+	}
+	$(this).addClass(this.dataset.icon);
+});
 
 $('#languageList').on('input', function (evt) {
 	localizeText($('#languageList').val());	
 });
-
 localizeText('en');
-
-
-
