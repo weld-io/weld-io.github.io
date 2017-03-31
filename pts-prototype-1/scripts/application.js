@@ -32,6 +32,10 @@ $('.weld-toolbar button').on('click', function (evt) {
 	$('.weld-dialog').removeClass('hidden');
 });
 
+// Elements
+
+$('.weld-element').draggable().resizable();
+
 // Contrast
 
 var LAYER_CONTRAST = 7;
