@@ -53,6 +53,7 @@ h2 {
 	font-family: initial;
 	font-size: initial;
 	text-transform: initial;
+	color: initial;
 }
 .weld-element:hover {
 	border: 2px solid lightgray;
@@ -203,15 +204,19 @@ button .text {
 
 .big-button {
 	background: white;
-	border-radius: 0.5em;
-	padding: 0.5em;
-	height: 2em;
-	box-shadow: 0 1px 2px #555;
+	border-radius: 0.2em;
+	padding: 0 0.8em;
+	height: 2.2em;
+	line-height: 2em;
+	box-shadow: 0 0.08em 0.1em rgba(0,0,0, 0.5);
 }
 .big-button:hover {
 }
 .big-button:active {
-	box-shadow: 0 0 2px #555;
+	box-shadow: 0 0.02em 0.1em rgba(0,0,0, 0.5);
+}
+.primary {
+	background: lightgreen;
 }
 
 .side-panel .big-button {
