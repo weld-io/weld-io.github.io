@@ -229,6 +229,10 @@ select:focus {
 	border-color: darkgray;
 }
 
+select {
+	text-transform: capitalize;
+}
+
 /* ----- Page/screen list ----- */
 
 .thumbnail {
