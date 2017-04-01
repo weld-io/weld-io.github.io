@@ -81,7 +81,7 @@ var setColorTheme = function (theme, contrast) {
 $('#colorTheme').on('input', function (evt) {
 	setColorTheme($('#colorTheme').val());	
 });
-//setColorTheme();
+setColorTheme();
 
 // Contrast
 
@@ -147,21 +147,25 @@ var localizeText = function (languageCode) {
 		}
 	);
 };
-// Icon switcher
-
-$('.weld-toolbar .icon').on('click', function (evt, a, b) {
-	var icons = this.dataset.icons.split(',');
-	var currentIndex = _.indexOf(icons, this.dataset.icon);
-	$(this).removeClass(this.dataset.icon);
-	if ( icons.length > currentIndex + 1) {
-		this.dataset.icon = icons[currentIndex + 1];
-	} else {
-		this.dataset.icon = icons[0];
-	}
-	$(this).addClass(this.dataset.icon);
-});
 
 $('#languageList').on('input', function (evt) {
 	localizeText($('#languageList').val());	
 });
 localizeText('en');
+
+// Icon switcher
+
+$('.weld-toolbar .icon').on('click', function (evt, a, b) {
+	if (this.dataset.icons) {
+		var icons = this.dataset.icons.split(',');
+		var currentIndex = _.indexOf(icons, this.dataset.icon);
+		$(this).removeClass(this.dataset.icon);
+		if ( icons.length > currentIndex + 1) {
+			this.dataset.icon = icons[currentIndex + 1];
+		} else {
+			this.dataset.icon = icons[0];
+		}
+		$(this).addClass(this.dataset.icon);		
+	}
+});
+
