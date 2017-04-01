@@ -7,6 +7,8 @@
 	font-family: inherit;
 	font-size: inherit;
 	text-transform: inherit;
+	color: inherit;
+	border-color: inherit;
 }
 
 /* Initial values */
@@ -212,7 +214,8 @@ select {
 	box-sizing: border-box;
 	background-color: white;
 	border-radius: 0.2em;
-	border: 2px solid lightgray;
+	border: 1px solid gray;
+	border-color: inherit;
 	color: inherit;
 	font-size: inherit;
 	min-width: 15em;
@@ -222,12 +225,12 @@ select {
 input:hover,
 textarea:hover,
 select:hover {
-	border-color: silver;
+	/*border-color: silver;*/
 }
 input:focus,
 textarea:focus,
 select:focus {
-	border-color: darkgray;
+	/*border-color: darkgray;*/
 }
 
 select {

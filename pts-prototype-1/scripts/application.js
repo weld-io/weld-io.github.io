@@ -20,6 +20,13 @@ tinycolor.prototype.different = function (amount) {
 	}
 };
 
+// Populate a <select> list
+var buildDropdownList = function (jqSelector, collection, selectedValue) {
+	for (var keyName in collection) {
+		$(jqSelector).append('<option' + (selectedValue === keyName ? ' selected' : '') + '>' + keyName + '</option>');
+	}
+};
+
 //-----------
 
 // Dialog
@@ -40,40 +47,53 @@ $('.weld-element').draggable().resizable();
 
 var colorThemes = {
 	default: {
-		'.weld-editor-background': '#808689',
-		'.weld-editor-panel': '#ddd',
-		'.weld-editor-panel:color': '#53585f',
-		'.weld-toolbar': '#efefef',
-		'.weld-dialog': '#f9f9f9',
+		'.layer0': '#808689',
+		'.layer1': '#ddd',
+		'.layer2': '#efefef',
+		'.layer3': '#f9f9f9',
 	},
 	weld: {
-		'.weld-editor-background': '#eeeff1',
-		'.weld-editor-panel': '#2e3b4b',
-		'.weld-editor-panel:color': '#ddd',
-		'.weld-toolbar': '#1b2939',
+		'.layer0': '#eeeff1',
+		'.layer1': '#2e3b4b',
+		//'.layer1:color': '#ddd',
+		'.layer2': '#1b2939',
 		'.side-panel.right': '#fbfbfb',
-		'.weld-dialog:color': '#333',
+		//'.layer3:color': '#333',
 	},
 	bright: {
-		'.weld-editor-background': '#caf',
-		'.weld-editor-panel': '#dad',
-		//'.weld-editor-panel:color': '#53585f',
-		'.weld-toolbar': '#abc',
-		'.weld-dialog': '#ddd',
+		'.layer0': '#caf',
+		'.layer1': '#dad',
+		'.layer2': '#abc',
+		'.layer3': '#ddd',
 	},
 	dark: {
-		'.weld-editor-background': 'darkblue',
-		'.weld-editor-panel': 'blue',
+		'.layer0': '#253347',
+		'.layer1': '#197cd8',
+		'.layer2': '#274a72',
+		'.layer3': '#f9f9f9',
 	},
 };
 
+var currentTheme;
+var currentContrast = 50;
+
 var setColorTheme = function (theme, contrast) {
-	theme = theme || 'default';
+	theme = theme || currentTheme || 'default';
+	currentTheme = theme;
+	currentContrast = contrast || currentContrast;
 	var themeStyles = jQuery.extend({}, colorThemes['default'], colorThemes[theme]);
 	for (var themeKey in themeStyles) {
 		var selector = themeKey.split(':')[0];
 		var colorProperty = themeKey.split(':')[1] || 'background-color';
 		var colorValue = themeStyles[themeKey];
+		// 1. Set text color based on contrast
+		if (colorProperty === 'background-color') {
+			var backColor = tinycolor(colorValue);
+			var foreColor = backColor.different(currentContrast);
+			$(selector).css('color', foreColor.toString());
+			$(selector).css('border-color', foreColor.toString());
+		}
+		// 2. Set background/text color based on property
 		$(selector).css(colorProperty, colorValue);
 	}
 };
@@ -82,29 +102,12 @@ $('#colorTheme').on('input', function (evt) {
 	setColorTheme($('#colorTheme').val());	
 });
 setColorTheme();
+buildDropdownList('#colorTheme', colorThemes, 'default');
 
 // Contrast
 
-var LAYER_CONTRAST = 7;
-var TEXT_CONTRAST = 50;
-
-$('#brightnessValue').on('input', function (evt) {
-	//console.log(evt.target.value);
-	// Layer3
-	var layer3Color = tinycolor({ r: evt.target.value, g: evt.target.value, b: evt.target.value });
-	$('.layer3').setTinycolor(layer3Color);
-	$('.layer3').setTinycolor(layer3Color.different(TEXT_CONTRAST), 'color');
-	// Layer2
-	var layer2Color = layer3Color.different(LAYER_CONTRAST);
-	$('.layer2').setTinycolor(layer2Color);
-	$('.layer2').setTinycolor(layer2Color.different(TEXT_CONTRAST), 'color');
-	// Layer1
-	var layer1Color = layer3Color.different(2*LAYER_CONTRAST);
-	$('.layer1').setTinycolor(layer1Color);
-	$('.layer1').setTinycolor(layer1Color.different(TEXT_CONTRAST), 'color');
-	// Layer0 - Background
-	var layer0Color = layer3Color.different(7*LAYER_CONTRAST);
-	$('.layer0').setTinycolor(layer0Color);
+$('#contrastValue').on('input', function (evt) {
+	setColorTheme(undefined, evt.target.value);
 });
 
 // Font
