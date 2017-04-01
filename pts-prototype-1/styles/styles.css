@@ -83,6 +83,7 @@ h2 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 }
 .weld-editor-panel > * {
 	flex-shrink: 0; /* never shrink */
@@ -125,13 +126,13 @@ h2 {
 	height: 4vh;
 }
 
-.weld-toolbar button {
+.icon-button {
 	padding: 0 0.5em;
 }
-.weld-toolbar button:hover {
+.icon-button:hover {
 	background: rgba(0, 0, 0, 0.1);
 }
-.weld-toolbar button:active {
+.icon-button:active {
 	box-shadow: inset 0 1px 2px #555;
 }
 
@@ -174,6 +175,7 @@ button.close-button .icon {
 /* ----- Buttons and Input fields ----- */
 
 fieldset {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -199,6 +201,23 @@ button .text {
 	display: block;
 }
 
+.big-button {
+	background: white;
+	border-radius: 0.5em;
+	padding: 0.5em;
+	height: 2em;
+	box-shadow: 0 1px 2px #555;
+}
+.big-button:hover {
+}
+.big-button:active {
+	box-shadow: 0 0 2px #555;
+}
+
+.side-panel .big-button {
+	width: 100%;
+}
+
 /*input {
 	display: inline-block;
 	width: 100%;
@@ -218,7 +237,8 @@ select {
 	border-color: inherit;
 	color: inherit;
 	font-size: inherit;
-	min-width: 15em;
+	width: 100%;
+	max-width: 10em;
 	padding: 0.6em;
 	margin: 0.2em;
 }

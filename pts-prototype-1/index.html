@@ -4,6 +4,7 @@
 	<title>Weld PTS Prototype 1</title>
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="https://s3-eu-west-1.amazonaws.com/weld-design-kit/weld-fonts.css">
 	<link rel="stylesheet" type="text/css" href="./styles/fontello.css">
 	<link rel="stylesheet" type="text/css" href="./fonts/dyslexie.css">
@@ -13,15 +14,15 @@
 
 	<nav class="weld-editor-panel weld-toolbar top layer2" role="navigation">
 		<button><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
-		<button>Menu</button>
-		<button><div class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></div><span class="text">Menu</span></button>
-		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
-		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
-		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
-		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
-		<button><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
-		<button>?</button>
-		<button class="openDialog">Menu</button>
+		<button class="big-button">Menu</button>
+		<button class="icon-button"><div class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></div><span class="text">Menu</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Menu</span></button>
+		<button class="icon-button">?</button>
+		<button class="big-button openDialog">Menu</button>
 	</nav>
 
 	<div class="weld-editor-background layer0">
@@ -37,6 +38,21 @@
 		</div>
 
 		<div class="weld-editor-panel side-panel right layer1">
+			<fieldset>
+				<label>X:</label>
+				<input type="number" value="23">
+			</fieldset>
+			<fieldset>
+				<label>Y:</label>
+				<input type="number" value="23">
+			</fieldset>
+			<fieldset>
+				<label>Font:</label>
+				<select><option>Helvetica</option></select>
+			</fieldset>
+			<fieldset>
+				<button class="big-button">Update</button>
+			</fieldset>
 		</div>
 
 		<div class="weld-canvas">

@@ -64,7 +64,8 @@ var colorThemes = {
 		'.layer0': '#caf',
 		'.layer1': '#dad',
 		'.layer2': '#abc',
-		'.layer3': '#ddd',
+		'.side-panel.right': '#add',
+		'.layer3': '#eee',
 	},
 	dark: {
 		'.layer0': '#253347',
