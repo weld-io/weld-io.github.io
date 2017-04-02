@@ -132,10 +132,21 @@ $('body').reactiveCss('text-transform', function() {
 
 var locales = {
 	'Menu': { sv: 'Meny' },
-	'Publish': { sv: 'Publicera' },
 	'Settings': { sv: 'Inställningar' },
 	'Page': { sv: 'Sida' },
 	'Update': { sv: 'Uppdatera' },
+	'Font:': { sv: 'Teckensnitt:' },
+	'My projects': { sv: 'Mina projekt' },
+	'Select': { sv: 'Markera' },
+	'Box': { sv: 'Rektangel' },
+	'Image': { sv: 'Bild' },
+	'Library': { sv: 'Bibliotek' },
+	'Undo': { sv: 'Ångra' },
+	'Edit': { sv: 'Redigera' },
+	'New screen': { sv: 'Ny skärm' },
+	'Help': { sv: 'Hjälp' },
+	'Preview': { sv: 'Förhandsgranska' },
+	'Publish': { sv: 'Publicera' },
 }
 var currentLanguageCode = 'en';
 
