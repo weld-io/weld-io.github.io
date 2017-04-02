@@ -91,8 +91,11 @@ var setColorTheme = function (theme, contrast) {
 		if (colorProperty === 'background-color') {
 			var backColor = tinycolor(colorValue);
 			var foreColor = backColor.different(currentContrast);
+			// Text color
 			$(selector).css('color', foreColor.toString());
-			$(selector).css('border-color', foreColor.toString());
+			// Input
+			$(selector + ' input').css('border-color', foreColor.toString());
+			$(selector + ' select').css('border-color', foreColor.toString());
 		}
 		// 2. Set background/text color based on property
 		$(selector).css(colorProperty, colorValue);
@@ -125,37 +128,75 @@ $('body').reactiveCss('text-transform', function() {
 	return $('#textTransform:checked').length ? 'uppercase' : 'none';
 });
 
-// Localize / i18n
+// Localize text
 
-var localizeText = function (languageCode) {
-	i18next.init(
-		{
-			lng: languageCode || 'en',
-			// evtl. load via xhr https://github.com/i18next/i18next-xhr-backend
-			resources: {
-				en: {
-					translation: {
-						settings: 'Settings',
+var locales = {
+	'Menu': { sv: 'Meny' },
+	'Publish': { sv: 'Publicera' },
+	'Settings': { sv: 'Inställningar' },
+	'Page': { sv: 'Sida' },
+	'Update': { sv: 'Uppdatera' },
+}
+var currentLanguageCode = 'en';
+
+var simpleLocalization = function (parentNode, languageCode, doUpdateLocales) {
+
+	var findLocaleByString = function (str, langCode) {
+		return _.find(locales, function (localeObj, localeKey) {
+			return localeKey === str || localeObj[langCode] === str;
+		});
+	};
+
+	var hasTextAndIsDifferent = function (translationObj, languageCode, $element) {
+		return _.has(translationObj, languageCode) && $element.text() !== translationObj[languageCode];
+	};
+
+	var updateTextNodesRecursively = function (parentNode, languageCode, doUpdateLocales) {
+		var childs = parentNode.children();
+		for (var i = 0; i < childs.length; i++) {
+			// http://stackoverflow.com/questions/3442394/using-text-to-retrieve-only-text-not-nested-in-child-tags
+			var rawText = $(childs[i])
+				.clone()    // clone the element
+				.children() // select all the children
+				.remove()   // remove all the children
+				.end()      // again go back to selected element
+				.text()
+				.trim();
+			if (rawText !== '') {
+				if (doUpdateLocales) {
+					// Update 'locales' from DOM
+					locales[rawText] = locales[rawText] || {};
+					locales[rawText][languageCode] = rawText;
+				}
+				else {
+					// Translate text
+					var translationObj = findLocaleByString(rawText, currentLanguageCode);
+					var $element = $(childs[i]);
+					if (hasTextAndIsDifferent(translationObj, languageCode, $element)) {
+						$element.text(translationObj[languageCode]);
+						// CSS animation
+						$element.addClass('animate-locale-change');
+						setTimeout(function () {
+							$element.removeClass('animate-locale-change');
+						}, 1500);
 					}
-				},
-				sv: {
-					translation: {
-						settings: 'Inställningar',
-					}
-				},
+				}
 			}
-		},
-		function (err, t) {
-			jqueryI18next.init(i18next, $);
-			$('body').localize();
+			updateTextNodesRecursively($(childs[i]), languageCode, doUpdateLocales);
 		}
-	);
+	};
+
+	updateTextNodesRecursively(parentNode, languageCode, doUpdateLocales);
+	currentLanguageCode = languageCode;
+
 };
 
 $('#languageList').on('input', function (evt) {
-	localizeText($('#languageList').val());	
+	simpleLocalization($('body'), $('#languageList').val());
+	currentLanguageCode = $('#languageList').val();
 });
-localizeText('en');
+// Save English texts from DOM to 'locales'
+simpleLocalization($('body'), currentLanguageCode, true);
 
 // Icon switcher
 
