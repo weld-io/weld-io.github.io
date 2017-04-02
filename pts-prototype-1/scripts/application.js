@@ -247,6 +247,9 @@ simpleLocalization($('body'), currentLanguageCode, true);
 
 // Icon switcher
 var icons = [
+	'icon-left-dir',
+	'icon-left',
+	'icon-left-hand',
 	'icon-cursor',
 	'icon-direction',
 	'icon-up-hand',
@@ -271,6 +274,12 @@ var icons = [
 	'icon-help-circled',
 	'icon-chat',
 	'icon-comment',
+	'icon-play',
+	'icon-play-circled',
+	'icon-desktop',
+	'icon-export',
+	'icon-publish',
+	'icon-shareable',
 ];
 
 $('.weld-toolbar button').on('click', function (evt, a, b) {
