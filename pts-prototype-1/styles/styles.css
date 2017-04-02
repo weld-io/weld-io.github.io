@@ -253,17 +253,12 @@ button .text {
 	display: block;
 }
 
-.big-button div[class^="icon-"] {
-    display: flex;
-    align-items: center;
-}
-
 .big-button {
 	background: rgba(255,255,255, 0.8);
 	border-radius: 0.2em;
 	padding: 0 0.8em;
 	margin: 0 0.2em;
-	height: 2.2em;
+	height: auto;
 	line-height: 2em;
 	box-shadow: 0 0.1em 0.1em rgba(0,0,0, 0.5);
 }
@@ -272,6 +267,12 @@ button .text {
 .big-button:active {
 	box-shadow: 0 0.02em 0.1em rgba(0,0,0, 0.5);
 }
+
+.big-button {
+	display: flex;
+	align-items: center;
+}
+
 .primary {
 	background: lightgreen;
 }

@@ -306,3 +306,7 @@ $('#icons').on('input', function (evt) {
 		$(this).addClass( icons[i  * 3 + parseInt($('#icons').val())] );
 	});
 });
+
+$('#iconSize').on('input', function (evt) {
+	$('.weld-toolbar button [class^="icon-"]').css('font-size', evt.target.value + 'em');
+});
