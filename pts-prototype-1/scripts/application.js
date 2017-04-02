@@ -83,6 +83,7 @@ var setColorTheme = function (theme, contrast) {
 	currentTheme = theme;
 	currentContrast = contrast || currentContrast;
 	var themeStyles = jQuery.extend({}, colorThemes['default'], colorThemes[theme]);
+	// Update all CSS classes in themeStyles
 	for (var themeKey in themeStyles) {
 		var selector = themeKey.split(':')[0];
 		var colorProperty = themeKey.split(':')[1] || 'background-color';
@@ -99,6 +100,16 @@ var setColorTheme = function (theme, contrast) {
 		}
 		// 2. Set background/text color based on property
 		$(selector).css(colorProperty, colorValue);
+	}
+	// Set class on <body>
+	var themeColor = tinycolor(themeStyles['.layer1']);
+	if (themeColor.isDark()) {
+		$('body').addClass('dark-theme');
+		$('body').removeClass('light-theme');
+	}
+	else {
+		$('body').addClass('light-theme');
+		$('body').removeClass('dark-theme');
 	}
 };
 
