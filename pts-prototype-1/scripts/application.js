@@ -136,7 +136,7 @@ $('body').reactiveCss('font-family', function() {
 });
 
 $('body').reactiveCss('text-transform', function() {
-	return $('#textTransform:checked').length ? 'uppercase' : 'none';
+	return $('#textTransform').val();
 });
 
 // Localize text

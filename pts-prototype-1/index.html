@@ -47,20 +47,20 @@
 
 	<nav class="weld-editor-panel weld-toolbar top layer2" role="navigation">
 		<button><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
-		<button class="big-button"><span class="icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></span><span class="text">My projects</span></button>
+		<button class="big-button"><span class="icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></span><span class="text">my projects</span></button>
 		<hr>
-		<button class="icon-button selectable selected" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"><div class="icon-cursor"></div><span class="text">Select</span></button>
-		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Box</span></button>
-		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Image</span></button>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Library</span></button>
+		<button class="icon-button selectable selected" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"><div class="icon-cursor"></div><span class="text">select</span></button>
+		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">box</span></button>
+		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">image</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">library</span></button>
 		<hr>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Undo</span></button>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Edit</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">undo</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">edit</span></button>
 		<hr>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Help</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">help</span></button>
 		<hr>
-		<button class="big-button openDialog"><span class="text">Preview</span></button>
-		<button class="big-button openDialog primary"><span class="text">Publish</span></button>
+		<button class="big-button opendialog"><span class="text">preview</span></button>
+		<button class="big-button opendialog primary"><span class="text">publish</span></button>
 	</nav>
 
 	<!-- <div class="weld-editor-panel weld-toolbar bottom"></div> -->
@@ -83,7 +83,11 @@
 				<option value="dyslexieregular">Dyslexie</option>
 			</select>
 			<label>Uppercase:</label>
-			<input type="checkbox" id="textTransform">
+			<select id="textTransform">
+				<option>Uppercase</option>
+				<option>Lowercase</option>
+				<option>Capitalize</option>
+			</select>
 		</fieldset>
 		<fieldset>
 			<label>Language:</label>
