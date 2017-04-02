@@ -222,17 +222,18 @@ simpleLocalization($('body'), currentLanguageCode, true);
 
 // Icon switcher
 
-$('.weld-toolbar .icon').on('click', function (evt, a, b) {
+$('.weld-toolbar button').on('click', function (evt, a, b) {
 	if (this.dataset.icons) {
 		var icons = this.dataset.icons.split(',');
 		var currentIndex = _.indexOf(icons, this.dataset.icon);
-		$(this).removeClass(this.dataset.icon);
+		var iconNode = $(this).find('[class^="icon-"]');
+		iconNode.removeClass(this.dataset.icon);
 		if ( icons.length > currentIndex + 1) {
 			this.dataset.icon = icons[currentIndex + 1];
 		} else {
 			this.dataset.icon = icons[0];
 		}
-		$(this).addClass(this.dataset.icon);		
+		iconNode.addClass(this.dataset.icon);
 	}
 });
 
