@@ -248,13 +248,14 @@ button {
 	line-height: 1em;
 	font-size: inherit;
 }
-button .icon {
-	display: inline-block;
-	height: 2em;
-	font-family: "fontello";
-}
+
 button .text {
 	display: block;
+}
+
+.big-button div[class^="icon-"] {
+    display: flex;
+    align-items: center;
 }
 
 .big-button {
