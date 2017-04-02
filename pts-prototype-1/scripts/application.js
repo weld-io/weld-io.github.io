@@ -246,19 +246,47 @@ $('#languageList').on('input', function (evt) {
 simpleLocalization($('body'), currentLanguageCode, true);
 
 // Icon switcher
+var icons = [
+	'icon-direction',
+	'icon-cursor',
+	'icon-up-hand',
+	'icon-marquee',
+	'icon-stop',
+	'icon-check-empty',
+	'icon-picture',
+	'icon-picture-1',
+	'icon-picture-2',
+	'icon-book',
+	'icon-folder-open-empty',
+	'icon-book-open',
+	'icon-ccw',
+	'icon-back',
+	'icon-back-in-time',
+	'icon-edit',
+	'icon-pencil',
+	'icon-scissors',
+	'icon-plus',
+	'icon-plus-squared',
+	'icon-doc-new',
+	'icon-help-circled',
+	'icon-chat',
+	'icon-comment',
+];
 
 $('.weld-toolbar button').on('click', function (evt, a, b) {
-	if (this.dataset.icons) {
-		var icons = this.dataset.icons.split(',');
-		var currentIndex = _.indexOf(icons, this.dataset.icon);
-		var iconNode = $(this).find('[class^="icon-"]');
-		iconNode.removeClass(this.dataset.icon);
-		if ( icons.length > currentIndex + 1) {
-			this.dataset.icon = icons[currentIndex + 1];
-		} else {
-			this.dataset.icon = icons[0];
-		}
-		iconNode.addClass(this.dataset.icon);
+	var iconNode = $(this).find('[class^="icon-"]');
+	console.log(iconNode.attr('class'));
+	var currentIndex = _.indexOf(icons, iconNode.attr('class'));
+	iconNode.removeClass();
+	if ( icons.length > currentIndex + 1) {
+		this.dataset.icon = icons[currentIndex + 1];
+	} else {
+		this.dataset.icon = icons[0];
 	}
+	iconNode.addClass(this.dataset.icon);
 });
 
+
+$('.weld-toolbar button div').each(function(i, node){
+	$(this).addClass(icons[i*3]);
+});
