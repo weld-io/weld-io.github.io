@@ -96,6 +96,7 @@ var currentContrast = 50;
 
 var setColorTheme = function (theme, contrast) {
 	theme = theme || currentTheme || 'default';
+	var whiteColor = tinycolor('white');
 	currentTheme = theme;
 	currentContrast = contrast || currentContrast;
 	var themeStyles = jQuery.extend({}, colorThemes['default'], colorThemes[theme]);
@@ -108,12 +109,16 @@ var setColorTheme = function (theme, contrast) {
 		if (colorProperty === 'background-color') {
 			var backColor = tinycolor(colorValue);
 			var foreColor = backColor.different(currentContrast);
+			var inputForeColor = whiteColor.different(currentContrast);
 			// Text color
 			$(selector).css('color', foreColor.toString());
 			// Input
-			$(selector + ' input').css('border-color', foreColor.toString());
-			$(selector + ' select').css('border-color', foreColor.toString());
+			$(selector + ' input').css('color', inputForeColor.toString());
+			$(selector + ' input').css('border-color', inputForeColor.toString());
+			$(selector + ' select').css('color', inputForeColor.toString());
+			$(selector + ' select').css('border-color', inputForeColor.toString());
 			// Button
+			$(selector + ' .big-button').css('color', inputForeColor.toString());
 			// Reset background
 			$(selector).css('background', 'initial');
 		}
