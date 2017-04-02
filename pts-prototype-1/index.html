@@ -12,97 +12,96 @@
 </head>
 <body>
 
-	<nav class="weld-editor-panel weld-toolbar top layer2" role="navigation">
-	    <button><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
-	    <button class="big-button"><span class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></span><span class="text">My projects</span></button>
-	    <hr>
-	    <button class="icon-button selectable selected"><div class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></div><span class="text">Select</span></button>
-		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Box</span></button>
-		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Image</span></button>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Library</span></button>
-	    <hr>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Undo</span></button>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Edit</span></button>
-	    <hr>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Help</span></button>
-	    <hr>
-		<button class="big-button openDialog"><span class="text">Preview</span></button>
-		<button class="big-button openDialog primary"><span class="text">Publish</span></button>
-	</nav>
-
-	<div class="weld-editor-background layer0">
-
-		<!-- <div class="weld-editor-panel weld-toolbar bottom"></div> -->
-
-		<div class="weld-editor-panel side-panel left layer1">
-			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
-			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
-			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
-			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
-			<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
-		</div>
-
-		<div class="weld-editor-panel side-panel right layer1">
-			<fieldset>
-				<label>X:</label>
-				<input type="number" value="23">
-			</fieldset>
-			<fieldset>
-				<label>Y:</label>
-				<input type="number" value="23">
-			</fieldset>
-			<fieldset>
-				<label>Font:</label>
-				<select><option>Helvetica</option></select>
-			</fieldset>
-			<fieldset>
-				<button class="big-button">Update</button>
-			</fieldset>
-		</div>
-
+	<div class="weld-canvas-background layer0">
 		<div class="weld-canvas">
 			<div class="weld-element image" alt="Image"></div>
 			<div class="weld-element text">Min hemsida</div>
 		</div>
-
-		<div class="weld-dialog xhidden weld-editor-panel layer3">
-			<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
-			<h2>Settings</h2>
-			<fieldset>
-				<label>Font size:</label>
-				<input id="fontSize" type="range" value="16" min="10" max="50"/>
-			</fieldset>
-			<fieldset>
-				<label>Font family:</label>
-				<select id="fontFamily">
-					<option value="weld-light" selected>Weld</option>
-					<option>Georgia</option>
-					<option>Times New Roman</option>
-					<option>Helvetica</option>
-					<option>Comic Sans MS</option>
-					<option value="dyslexieregular">Dyslexie</option>
-				</select>
-				<label>Uppercase:</label>
-				<input type="checkbox" id="textTransform">
-			</fieldset>
-			<fieldset>
-				<label>Language:</label>
-				<select id="languageList">
-					<option value="en" selected>English</option>
-					<option value="sv">Svenska</option>
-				</select>
-			</fieldset>
-			<fieldset>
-				<label>Colors:</label>
-				<select id="colorTheme"></select>
-			</fieldset>
-			<fieldset>
-				<label>Contrast:</label>
-				<input id="contrastValue" type="range" value="50" min="0" max="100"/>
-			</fieldset>
-		</div>
-
 	</div>
+
+	<div class="weld-editor-panel side-panel left layer1">
+		<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
+		<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
+		<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
+		<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
+		<div class="thumbnail"><div class="image"></div><div class="text">Page</div></div>
+	</div>
+
+	<div class="weld-editor-panel side-panel right layer1">
+		<fieldset>
+			<label>X:</label>
+			<input type="number" value="23">
+		</fieldset>
+		<fieldset>
+			<label>Y:</label>
+			<input type="number" value="23">
+		</fieldset>
+		<fieldset>
+			<label>Font:</label>
+			<select><option>Helvetica</option></select>
+		</fieldset>
+		<fieldset>
+			<button class="big-button">Update</button>
+		</fieldset>
+	</div>
+
+	<nav class="weld-editor-panel weld-toolbar top layer2" role="navigation">
+		<button><img class="weld-logo" src="//weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg"></button>
+		<button class="big-button"><span class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></span><span class="text">My projects</span></button>
+		<hr>
+		<button class="icon-button selectable selected"><div class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></div><span class="text">Select</span></button>
+		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Box</span></button>
+		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Image</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Library</span></button>
+		<hr>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Undo</span></button>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Edit</span></button>
+		<hr>
+		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Help</span></button>
+		<hr>
+		<button class="big-button openDialog"><span class="text">Preview</span></button>
+		<button class="big-button openDialog primary"><span class="text">Publish</span></button>
+	</nav>
+
+	<!-- <div class="weld-editor-panel weld-toolbar bottom"></div> -->
+
+	<div class="weld-dialog xhidden weld-editor-panel layer3">
+		<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
+		<h2>Settings</h2>
+		<fieldset>
+			<label>Font size:</label>
+			<input id="fontSize" type="range" value="16" min="10" max="50"/>
+		</fieldset>
+		<fieldset>
+			<label>Font family:</label>
+			<select id="fontFamily">
+				<option value="weld-light" selected>Weld</option>
+				<option>Georgia</option>
+				<option>Times New Roman</option>
+				<option>Helvetica</option>
+				<option>Comic Sans MS</option>
+				<option value="dyslexieregular">Dyslexie</option>
+			</select>
+			<label>Uppercase:</label>
+			<input type="checkbox" id="textTransform">
+		</fieldset>
+		<fieldset>
+			<label>Language:</label>
+			<select id="languageList">
+				<option value="en" selected>English</option>
+				<option value="sv">Svenska</option>
+			</select>
+		</fieldset>
+		<fieldset>
+			<label>Colors:</label>
+			<select id="colorTheme"></select>
+		</fieldset>
+		<fieldset>
+			<label>Contrast:</label>
+			<input id="contrastValue" type="range" value="50" min="0" max="100"/>
+		</fieldset>
+	</div>
+
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
