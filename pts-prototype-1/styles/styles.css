@@ -129,7 +129,8 @@ h2 {
 
 section {
 	display: flex;
-	align-items: flex-end;
+	align-items: center;
+	height: 90%;
 }
 
 .weld-logo {
@@ -139,14 +140,22 @@ section {
 .icon-button {
 	padding: 0 0.5em;
 }
-.icon-button:hover {
+
+.light-theme .icon-button:hover {
 	background: rgba(0,0,0, 0.1);
 }
-.icon-button:active {
-	box-shadow: inset 0 1px 2px #555;
+.light-theme .icon-button:active {
+	box-shadow: inset 0 0.1em 0.2em rgba(0,0,0, 0.2);
 }
 .light-theme .icon-button.selected {
 	background: rgba(0,0,0, 0.2);
+}
+
+.dark-theme .icon-button:hover {
+	background: rgba(255,255,255, 0.1);
+}
+.dark-theme .icon-button:active {
+	box-shadow: inset 0 0.1em 0.2em rgba(255,255,255, 0.2);
 }
 .dark-theme .icon-button.selected {
 	background: rgba(255,255,255, 0.2);
@@ -246,7 +255,7 @@ button .text {
 	margin: 0 0.2em;
 	height: 2.2em;
 	line-height: 2em;
-	box-shadow: 0 0.08em 0.1em rgba(0,0,0, 0.5);
+	box-shadow: 0 0.1em 0.1em rgba(0,0,0, 0.5);
 }
 .big-button:hover {
 }
