@@ -1,9 +1,24 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello.woff2?11546511') format('woff2');
+  src: url('../fonts/fontello.eot?83501004');
+  src: url('../fonts/fontello.eot?83501004#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?83501004') format('woff2'),
+       url('../fonts/fontello.woff?83501004') format('woff'),
+       url('../fonts/fontello.ttf?83501004') format('truetype'),
+       url('../fonts/fontello.svg?83501004#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?83501004#fontello') format('svg');
+  }
+}
+*/
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
@@ -42,4 +57,26 @@
  
 .icon-cursor:before { content: '\e800'; } /* '' */
 .icon-up-hand:before { content: '\e801'; } /* '' */
+.icon-picture:before { content: '\e802'; } /* '' */
+.icon-picture-1:before { content: '\e803'; } /* '' */
+.icon-picture-2:before { content: '\e804'; } /* '' */
+.icon-stop:before { content: '\e805'; } /* '' */
+.icon-check-empty:before { content: '\e806'; } /* '' */
+.icon-book:before { content: '\e807'; } /* '' */
+.icon-book-open:before { content: '\e808'; } /* '' */
+.icon-ccw:before { content: '\e809'; } /* '' */
+.icon-back:before { content: '\e80a'; } /* '' */
+.icon-back-in-time:before { content: '\e80b'; } /* '' */
+.icon-edit:before { content: '\e80c'; } /* '' */
+.icon-pencil:before { content: '\e80d'; } /* '' */
+.icon-scissors:before { content: '\e80e'; } /* '' */
+.icon-plus:before { content: '\e80f'; } /* '' */
+.icon-plus-squared:before { content: '\e810'; } /* '' */
+.icon-doc-new:before { content: '\e811'; } /* '' */
+.icon-inbox:before { content: '\e812'; } /* '' */
+.icon-help-circled:before { content: '\e813'; } /* '' */
+.icon-comment:before { content: '\e815'; } /* '' */
+.icon-marquee:before { content: '\e847'; } /* '' */
+.icon-chat:before { content: '\f03d'; } /* '' */
+.icon-folder-open-empty:before { content: '\f115'; } /* '' */
 .icon-direction:before { content: '\f124'; } /* '' */
