@@ -84,6 +84,11 @@ var colorThemes = {
 		'.weld-toolbar:background': 'linear-gradient(to bottom, #dedee3 0%, #c9c9ce 100%)',
 		'.weld-dialog': '#ececec',
 	},
+	photoshop: {
+		'.weld-canvas-background': '#262626',
+		'.weld-editor-panel': '#535353', // #454545
+		'.weld-dialog': '#e9e8e9',		
+	},
 };
 
 var currentTheme;
