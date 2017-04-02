@@ -134,7 +134,16 @@ section {
 }
 
 .weld-logo {
-	height: 4vh;
+	width: 6em;
+	height: 4em;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;	
+	background-image: url('https://weld-images.imgix.net/534fd70294b7ec0b00000002/568300516907de0c00178626/24230_weld-logo-black.svg');
+}
+
+.dark-theme .weld-logo {
+	background-image: url('https://weld-images.imgix.net/534fd70294b7ec0b00000002/55366e922daeb20300b7fc1b/11888weld-logo-white.svg');
 }
 
 .icon-button {
