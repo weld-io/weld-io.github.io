@@ -64,7 +64,7 @@ var colorThemes = {
 		'.side-panel.right': '#fbfbfb',
 		//'.weld-dialog:color': '#333',
 	},
-	bright: {
+	pastel: {
 		'.weld-canvas-background': '#caf',
 		'.side-panel': '#dad',
 		'.weld-toolbar': '#abc',
@@ -113,6 +113,7 @@ var setColorTheme = function (theme, contrast) {
 			// Input
 			$(selector + ' input').css('border-color', foreColor.toString());
 			$(selector + ' select').css('border-color', foreColor.toString());
+			// Button
 			// Reset background
 			$(selector).css('background', 'initial');
 		}
@@ -170,6 +171,7 @@ var locales = {
 	'Box': { sv: 'Rektangel' },
 	'Image': { sv: 'Bild' },
 	'Library': { sv: 'Bibliotek' },
+	'Objects': { sv: 'Objekt' },
 	'Undo': { sv: 'Ångra' },
 	'Edit': { sv: 'Redigera' },
 	'New screen': { sv: 'Ny skärm' },
