@@ -127,6 +127,11 @@ h2 {
 	border: none;
 }
 
+section {
+	display: flex;
+	align-items: flex-end;
+}
+
 .weld-logo {
 	height: 4vh;
 }
@@ -238,6 +243,7 @@ button .text {
 	background: white;
 	border-radius: 0.2em;
 	padding: 0 0.8em;
+	margin: 0 0.2em;
 	height: 2.2em;
 	line-height: 2em;
 	box-shadow: 0 0.08em 0.1em rgba(0,0,0, 0.5);
