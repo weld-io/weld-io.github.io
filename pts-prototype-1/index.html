@@ -52,20 +52,40 @@
 		<button class="icon-button selectable selected"><div class="icon icon-cursor" data-icons="icon-cursor,icon-up-hand,icon-direction" data-icon="icon-cursor"></div><span class="text">Select</span></button>
 		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Box</span></button>
 		<button class="icon-button selectable"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Image</span></button>
-		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Library</span></button>
+		<button class="icon-button open-library"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Library</span></button>
 		<hr>
 		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Undo</span></button>
 		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Edit</span></button>
 		<hr>
 		<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Help</span></button>
 		<hr>
-		<button class="big-button openDialog"><span class="text">Preview</span></button>
-		<button class="big-button openDialog primary"><span class="text">Publish</span></button>
+		<button class="big-button open-settings-dialog"><span class="text">Preview</span></button>
+		<button class="big-button open-settings-dialog primary"><span class="text">Publish</span></button>
 	</nav>
 
 	<!-- <div class="weld-editor-panel weld-toolbar bottom"></div> -->
 
-	<div class="weld-dialog xhidden weld-editor-panel layer3">
+	<div class="weld-library hidden weld-editor-panel layer3">
+		<div class="library-search">
+			<input type="text" placeholder="Search">
+		</div>
+		<div class="library-objects">
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+			<button class="icon-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/world_line.svg"><span class="text">Object</span></button>
+		</div>
+	</div>
+
+	<div class="weld-dialog xhidden weld-editor-panel layer4">
 		<button class="close-button"><img class="icon" src="//s3-eu-west-1.amazonaws.com/weld-symbol-library/icons/x.svg"></button>
 		<h2>Settings</h2>
 		<fieldset>

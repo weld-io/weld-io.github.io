@@ -35,8 +35,12 @@ $('.close-button').on('click', function (evt) {
 	$('.weld-dialog').addClass('hidden');
 });
 
-$('.weld-toolbar button.openDialog').on('click', function (evt) {
-	$('.weld-dialog').removeClass('hidden');
+$('.open-settings-dialog').on('click', function (evt) {
+	$('.weld-dialog').toggleClass('hidden');
+});
+
+$('.open-library').on('click', function (evt) {
+	$('.weld-library').toggleClass('hidden');
 });
 
 // Elements
@@ -47,31 +51,38 @@ $('.weld-element').draggable().resizable();
 
 var colorThemes = {
 	default: {
-		'.layer0': '#808689',
-		'.layer1': '#ddd',
-		'.layer2': '#efefef',
-		'.layer3': '#f9f9f9',
+		'.weld-canvas-background': '#808689',
+		'.side-panel': '#ddd',
+		'.weld-toolbar': '#efefef',
+		'.weld-dialog': '#f9f9f9',
 	},
 	weld: {
-		'.layer0': '#eeeff1',
-		'.layer1': '#2e3b4b',
-		//'.layer1:color': '#ddd',
-		'.layer2': '#1b2939',
+		'.weld-canvas-background': '#eeeff1',
+		'.side-panel': '#2e3b4b',
+		//'.side-panel:color': '#ddd',
+		'.weld-toolbar': '#1b2939',
 		'.side-panel.right': '#fbfbfb',
-		//'.layer3:color': '#333',
+		//'.weld-dialog:color': '#333',
 	},
 	bright: {
-		'.layer0': '#caf',
-		'.layer1': '#dad',
-		'.layer2': '#abc',
+		'.weld-canvas-background': '#caf',
+		'.side-panel': '#dad',
+		'.weld-toolbar': '#abc',
 		'.side-panel.right': '#add',
-		'.layer3': '#eee',
+		'.weld-dialog': '#eee',
 	},
-	dark: {
-		'.layer0': '#253347',
-		'.layer1': '#197cd8',
-		'.layer2': '#274a72',
-		'.layer3': '#f9f9f9',
+	darkblue: {
+		'.weld-canvas-background': '#253347',
+		'.side-panel': '#197cd8',
+		'.weld-toolbar': '#274a72',
+		'.weld-dialog': '#f9f9f9',
+	},
+	keynote: {
+		'.weld-canvas-background': '#c6cdd5',
+		'.weld-editor-panel': '#f6f6f6',
+		'.weld-toolbar': '#dedee3',
+		'.weld-toolbar:background': 'linear-gradient(to bottom, #dedee3 0%, #c9c9ce 100%)',
+		'.weld-dialog': '#ececec',
 	},
 };
 
@@ -97,13 +108,15 @@ var setColorTheme = function (theme, contrast) {
 			// Input
 			$(selector + ' input').css('border-color', foreColor.toString());
 			$(selector + ' select').css('border-color', foreColor.toString());
+			// Reset background
+			$(selector).css('background', 'initial');
 		}
 		// 2. Set background/text color based on property
 		$(selector).css(colorProperty, colorValue);
 	}
 	// Set class on <body>
-	var themeColor = tinycolor(themeStyles['.layer1']);
-	if (themeColor.isDark()) {
+	var toolbarColor = tinycolor($('.weld-toolbar').css('background-color'));
+	if (toolbarColor.isDark()) {
 		$('body').addClass('dark-theme');
 		$('body').removeClass('light-theme');
 	}

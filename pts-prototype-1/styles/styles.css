@@ -147,6 +147,27 @@ h2 {
 	background: rgba(255,255,255, 0.2);
 }
 
+/* ----- Library ----- */
+
+.weld-library {
+	left: 46%;
+	width: 19em;
+	top: 4em;
+	display: block; /* not flex */
+	padding: 0.5rem;
+	transition: all 0.2s;
+}
+
+.weld-library.hidden {
+	height: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.library-objects > * {
+	margin: 0 0.3em 0.8em 0;
+}
+
 /* ----- Dialog ----- */
 
 .weld-dialog {
@@ -155,8 +176,8 @@ h2 {
 	top: 20rem;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
-	width: 64vw;
-	max-width: 40em;
+	width: 60%;
+	max-width: 32rem;
 	min-height: 15em;
 	border-radius: 4px;
 	padding: 1em;
@@ -254,7 +275,7 @@ select {
 	color: inherit;
 	font-size: inherit;
 	width: 100%;
-	max-width: 10em;
+	max-width: 20em;
 	padding: 0.6em;
 	margin: 0.2em;
 }
@@ -284,6 +305,8 @@ select {
 	width: 100%;
 	height: 7rem;
 	background-color: white;
+	background-image: url('../images/thumbnail.jpg');
+	background-size: cover;
 }
 
 .thumbnail .text {
