@@ -282,6 +282,12 @@ var icons = [
 	'icon-shareable',
 ];
 
+var iconSetMap = {
+	Simple: 0,
+	Detailed: 1,
+	Custom: 2
+};
+
 $('.weld-toolbar button').on('click', function (evt, a, b) {
 	var iconNode = $(this).find('[class^="icon-"]');
 	console.log(iconNode.attr('class'));
@@ -300,13 +306,40 @@ $('.weld-toolbar button div').each(function(i, node){
 	$(this).addClass(icons[i*3]);
 });
 
-$('#icons').on('input', function (evt) {
+$('#iconSet').on('input', function (evt) {
 	$('.weld-toolbar button div').each(function(i, node){
 		$(this).removeClass();
-		$(this).addClass( icons[i  * 3 + parseInt($('#icons').val())] );
+		$(this).addClass( icons[i * 3 + iconSetMap[$('#iconSet').val()]] );
 	});
 });
 
 $('#iconSize').on('input', function (evt) {
 	$('.weld-toolbar button [class^="icon-"]').css('font-size', evt.target.value + 'em');
+});
+
+// Save
+
+$('.save').on('click', function (evt) {
+	var headers = [];
+	var total = [];
+	var iconLabels = [];
+	var icons = [];
+
+	$('.weld-dialog [id]').each(function(){
+		headers.push(this.id);
+		total.push($(this).val());
+	});
+
+	$('.weld-toolbar button [class^="icon-"]').each(function(){
+		icons.push(this.className);
+	});
+
+	$('.weld-toolbar button .text').each(function(){
+		iconLabels.push(this.innerHTML);
+	});
+
+	console.log('Current values (TAB separated):');
+	console.log(headers.join('\t') + '\n' + total.join('\t'));
+	console.log('Icons:');
+	console.log(iconLabels.join('\t') + '\n' + icons.join('\t'));
 });
