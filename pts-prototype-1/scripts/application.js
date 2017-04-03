@@ -50,7 +50,7 @@ $('.weld-element').draggable().resizable();
 // Colors
 
 var colorThemes = {
-	default: {
+	gray: {
 		'.weld-canvas-background': '#808689',
 		'.side-panel': '#ddd',
 		'.weld-toolbar': '#efefef',
@@ -91,11 +91,12 @@ var colorThemes = {
 	},
 };
 
+var DEFAULT_THEME = 'weld';
 var currentTheme;
 var currentContrast = 50;
 
 var setColorTheme = function (theme, contrast) {
-	theme = theme || currentTheme || 'default';
+	theme = theme || currentTheme || DEFAULT_THEME;
 	var whiteColor = tinycolor('white');
 	currentTheme = theme;
 	currentContrast = contrast || currentContrast;
@@ -141,7 +142,7 @@ $('#colorTheme').on('input', function (evt) {
 	setColorTheme($('#colorTheme').val());	
 });
 setColorTheme();
-buildDropdownList('#colorTheme', colorThemes, 'default');
+buildDropdownList('#colorTheme', colorThemes, DEFAULT_THEME);
 
 // Contrast
 
