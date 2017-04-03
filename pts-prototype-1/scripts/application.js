@@ -293,7 +293,11 @@ var iconSetMap = {
 	Custom: 2
 };
 
+// Click on icon when Settings is open
 $('.weld-toolbar button').on('click', function (evt, a, b) {
+	// Don't change icon when Settings is not open
+	if ($('.weld-dialog').hasClass('hidden'))
+		return;
 	var iconNode = $(this).find('[class^="icon-"]');
 	console.log(iconNode.attr('class'));
 	var currentIndex = _.indexOf(icons, iconNode.attr('class'));
