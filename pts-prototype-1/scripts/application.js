@@ -182,6 +182,13 @@ var locales = {
 	'Help': { sv: 'Hjälp' },
 	'Preview': { sv: 'Förhandsgranska' },
 	'Publish': { sv: 'Publicera' },
+	// Library
+	'Button': { 'sv': 'Tryckknapp' },
+	'Text field': { 'sv': 'Textfält' },
+	'Video player': { 'sv': 'Videospelare' },
+	'Email form': { 'sv': 'Epost-formulär' },
+	'Facebook share': { 'sv': 'Facebook dela-knapp' },
+	'Instagram feed': { 'sv': 'Instagram-flöde' },
 }
 var currentLanguageCode = 'en';
 
@@ -320,7 +327,7 @@ $('#iconSet').on('input', function (evt) {
 });
 
 $('#iconSize').on('input', function (evt) {
-	$('.weld-toolbar button [class^="icon-"]').css('font-size', evt.target.value + 'em');
+	$('button [class^="icon-"]').css('font-size', evt.target.value + 'em');
 });
 
 
