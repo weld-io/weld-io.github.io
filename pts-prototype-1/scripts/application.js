@@ -338,8 +338,11 @@ $('.save').on('click', function (evt) {
 		iconLabels.push(this.innerHTML);
 	});
 
-	console.log('Current values (TAB separated):');
-	console.log(headers.join('\t') + '\n' + total.join('\t'));
-	console.log('Icons:');
-	console.log(iconLabels.join('\t') + '\n' + icons.join('\t'));
+	var saveStr = '';
+	saveStr += 'Current values (TAB separated):' + '\n';
+	saveStr += headers.join('\t') + '\n' + total.join('\t') + '\n';
+	saveStr += 'Icons:' + '\n';
+	saveStr += iconLabels.join('\t') + '\n' + icons.join('\t') + '\n';
+	console.log(saveStr);
+	alert(saveStr);
 });
