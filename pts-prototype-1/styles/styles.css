@@ -274,8 +274,10 @@ button .text {
 	box-shadow: 0 0.1em 0.1em rgba(0,0,0, 0.5);
 }
 .big-button:hover {
+	opacity: 0.9;
 }
 .big-button:active {
+	opacity: 0.8;
 	box-shadow: 0 0.02em 0.1em rgba(0,0,0, 0.5);
 }
 
