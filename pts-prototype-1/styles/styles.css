@@ -207,13 +207,13 @@ section {
 	box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 	flex-direction: column;
 	justify-content: flex-start;
-	transition: top 0.5s, left 0.5s, opacity 0.5s;
+	transition: bottom 0.5s, left 0.5s, opacity 0.5s;
 }
 
 .weld-dialog.hidden {
 	opacity: 0;
 	pointer-events: none;
-	top: 0;
+	bottom: 100%;
 	left: 100%;
 }
 
