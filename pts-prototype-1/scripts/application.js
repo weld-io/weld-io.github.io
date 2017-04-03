@@ -169,6 +169,8 @@ var locales = {
 	'Page': { sv: 'Sida' },
 	'Update': { sv: 'Uppdatera' },
 	'Font:': { sv: 'Teckensnitt:' },
+	'Width:': { sv: 'Bredd:' },
+	'Height:': { sv: 'Höjd:' },
 	'Color:': { sv: 'Färg:' },
 	'Blå': { sv: 'Blå' },
 	'My projects': { sv: 'Mina projekt' },
