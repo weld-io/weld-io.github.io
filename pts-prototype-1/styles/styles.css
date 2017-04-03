@@ -342,10 +342,14 @@ select {
 	width: 100%;
 	height: 7rem;
 	background-color: white;
-	background-image: url('../images/thumbnail.jpg');
 	background-size: cover;
 	border: 2px solid black;
     border-color: inherit;
+	cursor: pointer;
+}
+
+.thumbnail .image.thumbnail {
+	background-image: url('../images/thumbnail.jpg');
 }
 
 .thumbnail .text {

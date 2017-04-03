@@ -348,6 +348,20 @@ $('.add-element').on('click', function (evt) {
 });
 
 
+// Add page thumbnail
+
+var clearPage = function (evt) {
+	$('.weld-canvas').empty();
+};
+
+$('.add-page').on('click', function (evt) {
+	var newThumbnail = $('<div class="thumbnail"><div class="image"></div><div class="text"><span>Page</span></div></div>').appendTo('.page-list');
+	newThumbnail.on('click', clearPage);
+});
+
+$('.thumbnail').on('click', clearPage);
+
+
 // Save
 
 $('.save').on('click', function (evt) {
