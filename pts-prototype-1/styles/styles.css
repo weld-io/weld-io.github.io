@@ -222,11 +222,6 @@ section {
 	flex-wrap: wrap;
 }
 
-.weld-dialog .fieldset *:nth-child(even) {
-	min-width: 80%;
-}
-
-
 button.close-button {
 	position: absolute;
 	right: 1em;
