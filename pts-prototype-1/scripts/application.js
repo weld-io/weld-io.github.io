@@ -181,6 +181,7 @@ var locales = {
 	'Undo': { sv: 'Ångra' },
 	'Edit': { sv: 'Redigera' },
 	'New screen': { sv: 'Ny skärm' },
+	'New page': { sv: 'Ny sida' },
 	'Help': { sv: 'Hjälp' },
 	'Preview': { sv: 'Förhandsgranska' },
 	'Publish': { sv: 'Publicera' },
@@ -257,6 +258,9 @@ var icons = [
 	'icon-stop',
 	'icon-marquee',
 	'icon-check-empty',
+	'icon-picture', // text
+	'icon-picture-1', // text
+	'icon-picture-2', // text
 	'icon-picture',
 	'icon-picture-1',
 	'icon-picture-2',
