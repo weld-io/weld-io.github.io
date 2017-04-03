@@ -196,7 +196,7 @@ section {
 .weld-dialog {
 	z-index: 100;
 	font-size: 1rem;
-	bottom: -13rem;
+	bottom: -11rem;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	width: 60%;
