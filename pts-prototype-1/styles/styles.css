@@ -338,6 +338,8 @@ select {
 	background-color: white;
 	background-image: url('../images/thumbnail.jpg');
 	background-size: cover;
+	border: 2px solid black;
+    border-color: inherit;
 }
 
 .thumbnail .text {
