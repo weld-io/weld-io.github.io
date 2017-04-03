@@ -258,9 +258,9 @@ var icons = [
 	'icon-stop',
 	'icon-marquee',
 	'icon-check-empty',
-	'icon-picture', // text
-	'icon-picture-1', // text
-	'icon-picture-2', // text
+	'icon-font', // text
+	'icon-font-1', // text
+	'icon-fontsize', // text
 	'icon-picture',
 	'icon-picture-1',
 	'icon-picture-2',
