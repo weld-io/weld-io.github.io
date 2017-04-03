@@ -58,6 +58,12 @@ h2 {
 .weld-element:hover {
 	border: 2px solid lightgray;
 }
+
+.weld-element.box {
+	background-color: lightgray;
+	width: 10em;
+	height: 10em;
+}
 .weld-element.image {
 	background-image: url('../images/girl-mom-photo-1445633883498-7f9922d37a3f.jpg');
 	background-size: cover;

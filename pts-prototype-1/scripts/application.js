@@ -43,9 +43,6 @@ $('.open-library').on('click', function (evt) {
 	$('.weld-library').toggleClass('hidden');
 });
 
-// Elements
-
-$('.weld-element').draggable().resizable();
 
 // Colors
 
@@ -325,6 +322,24 @@ $('#iconSet').on('input', function (evt) {
 $('#iconSize').on('input', function (evt) {
 	$('.weld-toolbar button [class^="icon-"]').css('font-size', evt.target.value + 'em');
 });
+
+
+// Add objects to canvas
+
+$('.add-element').on('click', function (evt) {
+	var newElement;
+	if ($(evt.currentTarget).hasClass('element-box')) {
+		newElement = $('<div class="weld-element box"></div>').appendTo('.weld-canvas');
+	}
+	else if ($(evt.currentTarget).hasClass('element-text')) {
+		newElement = $('<div class="weld-element text">Exempel på text</div>').appendTo('.weld-canvas');
+	}
+	if ($(evt.currentTarget).hasClass('element-image')) {
+		newElement = $('<div class="weld-element image" alt="Image"></div>').appendTo('.weld-canvas');
+	}
+	newElement.draggable().resizable();
+});
+
 
 // Save
 
