@@ -173,7 +173,7 @@ section {
 /* ----- Library ----- */
 
 .weld-library {
-	left: 46%;
+	left: 35%;
 	width: 19em;
 	top: 4em;
 	display: block; /* not flex */
