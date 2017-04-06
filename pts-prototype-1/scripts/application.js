@@ -369,6 +369,7 @@ var clearPage = function (evt) {
 $('.add-page').on('click', function (evt) {
 	var newThumbnail = $('<div class="thumbnail"><div class="image"></div><div class="text"><span>Page</span></div></div>').appendTo('.page-list');
 	newThumbnail.on('click', clearPage);
+	clearPage();
 });
 
 $('.thumbnail').on('click', clearPage);
