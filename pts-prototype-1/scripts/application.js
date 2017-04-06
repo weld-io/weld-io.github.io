@@ -49,13 +49,25 @@ $('.open-library').on('click', function (evt) {
 var colorThemes = {
 	// Syntax: 'SELECTOR:PROPERTY': 'VALUE',
 	// PROPERTY = 'background-color' by default
-	gray: {
+	'gray': {
 		'.weld-canvas-background': '#808689',
 		'.side-panel': '#ddd',
 		'.layer2': '#efefef',
 		'.weld-dialog': '#f9f9f9',
 	},
-	weld: {
+	'keynote': {
+		'.weld-canvas-background': '#c6cdd5',
+		'.weld-editor-panel': '#f6f6f6',
+		'.layer2': '#dedee3',
+		'.layer2:background': 'linear-gradient(to bottom, #dedee3 0%, #c9c9ce 100%)',
+		'.weld-dialog': '#ececec',
+	},
+	'photoshop': {
+		'.weld-canvas-background': '#262626',
+		'.weld-editor-panel': '#535353', // #454545 also used
+		'.weld-dialog': '#e9e8e9',		
+	},
+	'weld': {
 		'.weld-canvas-background': '#eeeff1',
 		'.side-panel': '#2e3b4b',
 		//'.side-panel:color': '#ddd',
@@ -63,36 +75,24 @@ var colorThemes = {
 		'.side-panel.right': '#fbfbfb',
 		//'.weld-dialog:color': '#333',
 	},
-	weld2: {
+	'weld dark': {
 		'.weld-canvas-background': '#999',
 		'.side-panel': '#2e3b4b',
 		'.layer2': '#1b2939',
 		'.side-panel.right': '#fbfbfb',
 	},
-	pastel: {
+	'dark blue': {
+		'.weld-canvas-background': '#253347',
+		'.side-panel': '#316098',
+		'.layer2': '#274a72',
+		'.weld-dialog': '#f9f9f9',
+	},
+	'pastel': {
 		'.weld-canvas-background': '#caf',
 		'.side-panel': '#dad',
 		'.layer2': '#abc',
 		'.side-panel.right': '#add',
 		'.weld-dialog': '#eee',
-	},
-	darkblue: {
-		'.weld-canvas-background': '#253347',
-		'.side-panel': '#197cd8',
-		'.layer2': '#274a72',
-		'.weld-dialog': '#f9f9f9',
-	},
-	keynote: {
-		'.weld-canvas-background': '#c6cdd5',
-		'.weld-editor-panel': '#f6f6f6',
-		'.layer2': '#dedee3',
-		'.layer2:background': 'linear-gradient(to bottom, #dedee3 0%, #c9c9ce 100%)',
-		'.weld-dialog': '#ececec',
-	},
-	photoshop: {
-		'.weld-canvas-background': '#262626',
-		'.weld-editor-panel': '#535353', // #454545 also used
-		'.weld-dialog': '#e9e8e9',		
 	},
 };
 
