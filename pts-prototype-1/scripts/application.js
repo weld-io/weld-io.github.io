@@ -132,14 +132,14 @@ var setColorTheme = function (theme, contrast) {
 		$(selector).css(colorProperty, colorValue);
 	}
 	// Set class on <body>
-	var toolbarColor = tinycolor($('.weld-toolbar').css('background-color'));
-	if (toolbarColor.isDark()) {
-		$('body').addClass('dark-theme');
-		$('body').removeClass('light-theme');
-	}
-	else {
+	var toolbarColor = tinycolor($('.layer2').css('background-color'));
+	if (toolbarColor.isLight() || theme === 'keynote') {
 		$('body').addClass('light-theme');
 		$('body').removeClass('dark-theme');
+	}
+	else {
+		$('body').addClass('dark-theme');
+		$('body').removeClass('light-theme');
 	}
 };
 
@@ -315,7 +315,6 @@ $('.weld-toolbar button').on('click', function (evt, a, b) {
 	if ($('.weld-dialog').hasClass('hidden'))
 		return;
 	var iconNode = $(this).find('[class^="icon-"]');
-	console.log(iconNode.attr('class'));
 	var currentIndex = _.indexOf(icons, iconNode.attr('class'));
 	iconNode.removeClass();
 	if ( icons.length > currentIndex + 1) {
