@@ -47,6 +47,8 @@ $('.open-library').on('click', function (evt) {
 // Colors
 
 var colorThemes = {
+	// Syntax: 'SELECTOR:PROPERTY': 'VALUE',
+	// PROPERTY = 'background-color' by default
 	gray: {
 		'.weld-canvas-background': '#808689',
 		'.side-panel': '#ddd',
@@ -60,6 +62,12 @@ var colorThemes = {
 		'.layer2': '#1b2939',
 		'.side-panel.right': '#fbfbfb',
 		//'.weld-dialog:color': '#333',
+	},
+	weld2: {
+		'.weld-canvas-background': '#999',
+		'.side-panel': '#2e3b4b',
+		'.layer2': '#1b2939',
+		'.side-panel.right': '#fbfbfb',
 	},
 	pastel: {
 		'.weld-canvas-background': '#caf',
@@ -83,7 +91,7 @@ var colorThemes = {
 	},
 	photoshop: {
 		'.weld-canvas-background': '#262626',
-		'.weld-editor-panel': '#535353', // #454545
+		'.weld-editor-panel': '#535353', // #454545 also used
 		'.weld-dialog': '#e9e8e9',		
 	},
 };
@@ -153,8 +161,10 @@ $('body').reactiveCss('font-size', function() {
 	return $('#fontSize').val() + 'px';
 });
 
-$('body').reactiveCss('font-family', function() {
-	return $('#fontFamily').val();
+$('#fontFamily').on('input', function (evt) {
+	$('body').css('font-family', evt.target.value);
+	var fontSizeAdjust = evt.target.value === 'dyslexieregular' ? { 'font-size': '85%', 'line-height': '100%' } : { 'font-size': '100%', 'line-height': '100%' };
+	$('.extra-font-wrapper').css(fontSizeAdjust);
 });
 
 $('body').reactiveCss('text-transform', function() {
@@ -179,6 +189,7 @@ var locales = {
 	'Image': { sv: 'Bild' },
 	'Library': { sv: 'Bibliotek' },
 	'Objects': { sv: 'Objekt' },
+	'Insert': { sv: 'Infoga' },
 	'Undo': { sv: 'Ångra' },
 	'Edit': { sv: 'Redigera' },
 	'New screen': { sv: 'Ny skärm' },
