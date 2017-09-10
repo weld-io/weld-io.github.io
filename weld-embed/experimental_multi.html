@@ -10,13 +10,21 @@
 		}
 
 		.weld-embed {
-			height: auto;
 		}
 
 		.placeholder {
 			width: 100%;
 			height: 100%;
+			min-height: 400px;
 			background-color: tomato;
+		}
+
+		.green {
+			background-color: greenyellow;
+		}
+
+		.blue {
+			background-color: deepskyblue;
 		}
 
 	</style>
@@ -24,13 +32,21 @@
 <body>
 	<h1>Multiple embeds - weld-experimental</h1>
 
-	<div class="weld-embed" data-weld-project="slug:weld-test-everything"></div>
-	<hr>
-	<div class="weld-embed" data-weld-project="slug:pop-cares-se-copy" data-weld-screen="">
-		<div class="placeholder"></div>
+	<div class="weld-embed" data-weld-project="slug:weld-test-everything">
+		<div class="placeholder red"></div>
 	</div>
+	
 	<hr>
-	<div class="weld-embed" data-weld-project="slug:weld-test-everything" data-weld-screen="slug:responsive"></div>
+
+	<div class="weld-embed" data-weld-project="slug:pop-cares-se-copy" data-weld-screen="">
+		<div class="placeholder green"></div>
+	</div>
+	
+	<hr>
+
+	<div class="weld-embed" data-weld-project="slug:weld-test-everything" data-weld-screen="slug:responsive">
+		<div class="placeholder blue"></div>
+	</div>
 
 <script type="text/javascript" src="https://weld-experimental.herokuapp.com/api/embed?key=56faf1717785f4e6477c14ae&embeddedBy=user"></script>
 
