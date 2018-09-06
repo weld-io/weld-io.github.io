@@ -1,0 +1,8 @@
+title: Weld Growth Tool Collection
+description: Open-source projects developed by the Weld (https://www.weld.io) team.
+google_analytics: UA-44977959-7
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
